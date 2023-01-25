@@ -29,7 +29,7 @@ const CardGrid = () => {
 			body: JSON.stringify(apiBodyData),
 		});
 		const response = await data.json();
-		const formattedCo2 = Math.floor(response.co2e);
+		const formattedCo2 = parseFloat(response.co2e).toFixed(2);
 		setco2(formattedCo2);
 		console.log(formattedCo2);
 	}
@@ -40,7 +40,9 @@ const CardGrid = () => {
 				<CardHeader display="grid" placeItems="center">
 					<CardCO2 co2={co2} />
 					<Heading size="md">Network/API</Heading>
-					<Text textAlign={'center'} size="sm">CO2 from all Network Operations</Text>
+					<Text textAlign={"center"} size="sm">
+						CO2 from all Network Operations
+					</Text>
 				</CardHeader>
 				<CardBody></CardBody>
 				<CardFooter>
