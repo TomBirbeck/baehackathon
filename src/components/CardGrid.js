@@ -1,11 +1,20 @@
-import { Button, Card, CardBody, CardFooter, CardHeader, Heading, SimpleGrid, Text } from "@chakra-ui/react";
+import {
+	Button,
+	Card,
+	CardBody,
+	CardFooter,
+	CardHeader,
+	Heading,
+	SimpleGrid,
+	Text,
+} from "@chakra-ui/react";
 import { useState } from "react";
 import CardCO2 from "./CardCO2";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 const CardGrid = () => {
-	const [apiData, setApiData] = useState({ data: 1, time: 1000 });
+	const [apiData, setApiData] = useState({ data: 30, time: 100000 });
 	const [co2, setco2] = useState(0);
 
 	async function fetchRequest() {
@@ -35,7 +44,10 @@ const CardGrid = () => {
 	}
 
 	return (
-		<SimpleGrid spacing={4} templateColumns="repeat(auto-fill, minmax(200px, 1fr))">
+		<SimpleGrid
+			spacing={4}
+			templateColumns="repeat(auto-fill, minmax(200px, 1fr))"
+		>
 			<Card borderWidth={2} borderColor="blackAlpha.900">
 				<CardHeader display="grid" placeItems="center">
 					<CardCO2 co2={co2} />
@@ -44,7 +56,10 @@ const CardGrid = () => {
 						CO2 from all Network Operations
 					</Text>
 				</CardHeader>
-				<CardBody></CardBody>
+				<CardBody>
+					<p>Data Usage: 20gb</p>
+					<p>Time Used: 1000mins</p>
+				</CardBody>
 				<CardFooter>
 					<Button onClick={fetchRequest}>Update</Button>
 				</CardFooter>
