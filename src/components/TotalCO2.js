@@ -1,9 +1,9 @@
 import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react";
 
-const TotalCO2 = () => {
+const TotalCO2 = ({co2}) => {
 	return (
-		<CircularProgress value={40} color="green.400" size={50}>
-			<CircularProgressLabel>40kgCo2e</CircularProgressLabel>
+		<CircularProgress value={co2} color="green.400" size={'50px'}>
+			<CircularProgressLabel>{co2}kgCo2e</CircularProgressLabel>
 		</CircularProgress>
 	);
 };
