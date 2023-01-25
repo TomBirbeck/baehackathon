@@ -1,11 +1,11 @@
 import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react";
 
-const TotalCO2 = ({co2}) => {
+const CardCO2 = ({co2}) => {
 	return (
-		<CircularProgress value={co2} color="green.400" size={500}>
+		<CircularProgress value={co2} color="green.400" size={200}>
 			<CircularProgressLabel>{co2}kgCo2e</CircularProgressLabel>
 		</CircularProgress>
 	);
 };
 
-export default TotalCO2;
+export default CardCO2;

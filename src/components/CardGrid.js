@@ -1,7 +1,6 @@
 import { Button, Card, CardBody, CardFooter, CardHeader, Heading, SimpleGrid, Text } from "@chakra-ui/react";
-import TotalCO2 from "./TotalCO2";
-// import CardUpdate from "../fetch.js";
 import { useState } from "react";
+import CardCO2 from "./CardCO2";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -39,9 +38,9 @@ const CardGrid = () => {
 		<SimpleGrid spacing={4} templateColumns="repeat(auto-fill, minmax(200px, 1fr))">
 			<Card borderWidth={2} borderColor="blackAlpha.900">
 				<CardHeader display="grid" placeItems="center">
-					<TotalCO2 co2={co2} />
+					<CardCO2 co2={co2} />
 					<Heading size="md">Network/API</Heading>
-					<Text size="sm">Subtitle</Text>
+					<Text textAlign={'center'} size="sm">CO2 from all Network Operations</Text>
 				</CardHeader>
 				<CardBody></CardBody>
 				<CardFooter>
