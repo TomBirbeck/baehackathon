@@ -14,11 +14,14 @@ const theme = extendTheme({
 		}),
 		colors: {
 			transparent: "transparent",
-			black: "#000",
+			black: "#000234",
 			white: "#fff",
-			gray: {
-				50: "#f7fafc",
-				900: "#171923",
+			theme: {
+				100: "##E2CFEA",
+				300: "##A06CD5",
+				500: " #6247AA",
+				700: " #102B3F",
+				900: " #062726",
 			},
 		},
 	},
